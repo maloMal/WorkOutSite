@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}	
+
+{% block body_block %}
+
+<div class="page-header">
+	WELCOME TO THIS SITE THAT CONTAINS WORKOUT STUFF
+	Please choose an exercise listed below:
+</div>
+
+<div class="row placeholders">
+<div class="col-xs-12 col-md-6 placeholder">
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h3 class="panel-title">List of Exercises</h3>
+	</div>
+</div>
+
+<ul class = "list-group">
+{% for exercise in exercises %}
+	<li class="list-group-item"><a href="{url 'exercises' exercises.slug %}"><p>{{exercise.name}}</p></a></li>
+{% endfor %}

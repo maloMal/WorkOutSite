@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}	
+
+{% block title %}{{exercise.name}}{% endblock %}
+
+{% block body_block %}
+<div class="page-header">
+	<h1>{{ exercise.name }}</h1>
+	<button id="likes" data-catid="{{category.id}}" class="btn btn-primary" type="button">
+<span class="glyphicon glyphicon-thumbs-up"></span>
+Like
+</button>

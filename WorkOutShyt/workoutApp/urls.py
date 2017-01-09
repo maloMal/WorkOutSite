@@ -1,4 +1,11 @@
 from django.conf.urls import patterns, url
-from tutorial_app import views
+from workoutApp import views
 
-urlpatterns = patterns('', urls(r'))
+urlpatterns = patterns('', 
+	url(r'^$', views.index, name='index'), 
+	url(r'^about/', views.about, name='about'),
+	url(r'^exercise/(?P<exercise_name>[\w\-]+)/$', views.exercise, name='exercise'),
+	#url(r'^profile/),
+
+
+		)
